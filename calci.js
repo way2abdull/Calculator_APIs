@@ -1,12 +1,14 @@
-const express = require('express');
-
+// const express = require('express');
+import express from 'express';
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 
 app.post('/add', (req,res) => {
-    sum = req.body.a+req.body.b;
+    let nums = req.body.nums;
+    console.log(nums);
+    let sum = (((req.body.a) + 1)/2) * (req.body.a);
     res.send(`sum is ${sum}`);
 })
 
